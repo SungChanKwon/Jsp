@@ -25,5 +25,5 @@ public class MemberVO {
 	String pwd;
 	String email;
 	String phone;
-	String admin;
+	int admin;
 }
