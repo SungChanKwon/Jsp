@@ -1,0 +1,28 @@
+package com.saeyan.dto;
+
+import java.sql.Connection;
+
+//싱글톤.......
+
+public class MemberDAO {
+	
+	private static MemberDAO instance = new MemberDAO();
+
+	private MemberDAO() {
+	}
+	
+	public static MemberDAO getInstance() {
+		return instance;
+	}
+	
+	public Connection getConnection() {
+		String url = "jdbc:oracle:thin:@localhost:1521:xe";
+		String user = "ezen";
+		String password = "1234";
+		
+		
+		Class.forName("oracle.jdbc:driver.OracleDriver");
+		
+		return null;
+	}
+}

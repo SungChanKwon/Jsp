@@ -1,0 +1,27 @@
+package com.saeyan.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+/*
+ * create table member(
+    name VARCHAR2(30),
+    userid VARCHAR2(20) PRIMARY key,
+    pwd VARCHAR2(20),
+    email VARCHAR2(30),
+    phone CHAR(13),
+    admin number(1)
+);
+ */
+
+
+@Setter
+@Getter
+public class MemberVO {
+	String name;
+	String userid;
+	String pwd;
+	String email;
+	String phone;
+	String admin;
+}
