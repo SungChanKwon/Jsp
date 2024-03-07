@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.saeyan.dao.MemberDAO;
 import com.saeyan.dto.MemberVO;
@@ -43,8 +44,11 @@ public class JoinServlet extends HttpServlet {
 		MemberDAO mDao = MemberDAO.getInstance();
 		int result = mDao.insertMember(vo);
 		
+		HttpSession session = request.getSession();
+		
 		if(result == 1) {
 			//회원가입 성공
+			session.setAttribute("userid", userid);//userid or vo.setUserid 써도됨
 			request.setAttribute("message", "회원가입에 성공했습니다.");
 		}else {
 			//회원가입 실패
