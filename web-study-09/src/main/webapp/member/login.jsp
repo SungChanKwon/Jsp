@@ -20,10 +20,11 @@
             <td><input type="password" name="pwd"></td>
          </tr>
          <tr>
-            <td colspan="2" align="center"><input type="submit" value="로그인"
-               onclick="return loginCheck()">&nbsp;&nbsp; 
+            <td colspan="2" align="center">
+            <input type="submit" value="로그인" onclick="return loginCheck()">&nbsp;&nbsp; 
                <input type="reset" value="취소"> &nbsp;&nbsp; 
-               <input type="button" value="회원 가입" onclick="location.href='join.do'"></td>
+               <input type="button" value="회원 가입" onclick="location.href='join.do'">
+            </td>
          </tr>
          <tr>
             <td colspan="2">${message}</td>
