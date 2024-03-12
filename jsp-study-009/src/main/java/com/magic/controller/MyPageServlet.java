@@ -34,7 +34,7 @@ public class MyPageServlet extends HttpServlet {
 		
 		//값들을 DB에 넣어야함
 		vo.setId(request.getParameter("id"));
-		vo.setPass(request.getParameter("pass"));
+		vo.setPass(request.getParameter("pwd"));
 		vo.setName(request.getParameter("name"));
 		vo.setLev(request.getParameter("lev"));
 		vo.setGender(Integer.parseInt(request.getParameter("gender")));
@@ -48,7 +48,13 @@ public class MyPageServlet extends HttpServlet {
 		if(result == 1) {
 			vo = eDao.getMember(vo.getId());
 			request.setAttribute("message", "회원 정보가 수정되었습니다.");
+			request.setAttribute("member", vo);
+			
 			session.setAttribute("loginUser", vo);
+			
+			result = eDao.userCheck(vo.getId(), vo.getPass(), vo.getLev()); //레벨 체크하기 위해서!
+			request.setAttribute("result", result);
+			
 			url = "employees/joinsuccess.jsp";
 		}
 		
