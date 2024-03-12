@@ -1,6 +1,8 @@
 INDEX VERSION 1.134
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2436900184.index
 \web-study-04\src\main\java
+C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3444962523.index
+\web-study-10\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3577549765.index
 \ott_netflix_project\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2859240043.index
