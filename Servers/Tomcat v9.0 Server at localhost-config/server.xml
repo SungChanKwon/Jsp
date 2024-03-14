@@ -122,8 +122,11 @@
 
 
 
-				<Context docBase="jsp-study-10" path="/jsp-study-10"
-					reloadable="true" source="org.eclipse.jst.jee.server:jsp-study-10">
+
+				<Context docBase="web-study-10-practice"
+					path="/web-study-10-practice" reloadable="true"
+					source="org.eclipse.jst.jee.server:web-study-10-practice">
+					
 					<Resource name="jdbc/myoracle" auth="Container"
 		              type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"
 		              url="jdbc:oracle:thin:@127.0.0.1:1521:xe"

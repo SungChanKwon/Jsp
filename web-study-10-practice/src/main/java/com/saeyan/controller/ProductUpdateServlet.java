@@ -14,54 +14,61 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 import com.saeyan.dao.ProductDAO;
 import com.saeyan.dto.ProductVO;
 
-@WebServlet("/productWrite.do")
-public class ProductWriteServlet extends HttpServlet {
+
+//PRG 방식 생각하기!
+@WebServlet("/productUpdate.do")
+public class ProductUpdateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("product/productWrite.jsp")
-			.forward(request, response);
+		
+		String code = request.getParameter("code");
+		
+		ProductVO vo = ProductDAO.getInstance()
+				.selectProductByCode(Integer.parseInt(code));
+		
+		request.setAttribute("product", vo);
+		
+		String url = "product/productUpdate.jsp";
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		request.setCharacterEncoding("utf-8");
-		response.setContentType("text/html; charset=utf-8");
 		
-		String savePath = "upload";
 		ServletContext context = getServletContext();
-		
-		//저장경로
-		String path = context.getRealPath(savePath);
-		System.out.println("저장경로 : " + path);
-		
+		String path = context.getRealPath("upload");
 		String encType = "utf-8";
-		int sizeLimit = 20*1024*1024; // 최대 2MB 전송
+		int sizeLimit = 20*1024*1024;
 		
-		//  ↓ request 객체,               ↓ 저장될 서버 경로,       ↓ 파일 최대 크기,    ↓ 인코딩 방식,       ↓ 같은 이름의 파일명 방지 처리
-		// (HttpServletRequest request, String saveDirectory, int maxPostSize, String encoding, FileRenamePolicy policy)
-		// 아래와 같이 MultipartRequest를 생성만 해주면 파일이 업로드 된다.(파일 자체의 업로드 완료)
 		MultipartRequest multi = new MultipartRequest(
-				request,
-				path,
-				sizeLimit,
-				encType,
-				new DefaultFileRenamePolicy());
-				
+				request, path, sizeLimit, encType, new DefaultFileRenamePolicy());
+		
+		String code = multi.getParameter("code");
 		String name = multi.getParameter("name");
-		int price = Integer.parseInt(multi.getParameter("price"));
+		String price = multi.getParameter("price");
+		String pictureUrl = multi.getFilesystemName("pictureUrl");
 		String description = multi.getParameter("description");
-		String pictureurl = multi.getFilesystemName("pictureurl");
+		
+		if(pictureUrl == null) {
+			pictureUrl = multi.getParameter("nonmakeImg");
+		}
 		
 		ProductVO vo = new ProductVO();
+		
+		vo.setCode(Integer.parseInt(code));
 		vo.setName(name);
-		vo.setPrice(price);
+		vo.setPrice(Integer.parseInt(price));
+		vo.setPictureUrl(pictureUrl);
 		vo.setDescription(description);
-		vo.setPictureurl(pictureurl);
 		
 		ProductDAO pDao = ProductDAO.getInstance();
-		pDao.insertProduct(vo); //저장
+		pDao.updateProduct(vo);
 		
 		response.sendRedirect("productList.do");
+		
+	
 	}
 
 }
