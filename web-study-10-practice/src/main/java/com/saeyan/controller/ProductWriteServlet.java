@@ -34,6 +34,9 @@ public class ProductWriteServlet extends HttpServlet {
 		String encType = "utf-8";
 		int sizeLimit = 20*1024*1024;
 		
+			//  ↓ request 객체,               ↓ 저장될 서버 경로,       ↓ 파일 최대 크기,    ↓ 인코딩 방식,       ↓ 같은 이름의 파일명 방지 처리
+			// (HttpServletRequest request, String saveDirectory, int maxPostSize, String encoding, FileRenamePolicy policy)
+			// 아래와 같이 MultipartRequest를 생성만 해주면 파일이 업로드 된다.(파일 자체의 업로드 완료)
 		MultipartRequest multi = new MultipartRequest(
 				request, path, sizeLimit, encType, new DefaultFileRenamePolicy());
 		

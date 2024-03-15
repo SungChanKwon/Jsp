@@ -70,14 +70,15 @@ public class ProductDAO {
 			PreparedStatement pstmt = null;
 		try {
 			con = DBManager.getConnection();
-			pstmt = con.prepareStatement(sql); // 맵핑 ==> "insert into product values(product_seq.nextval, ?,?,?,?)";
+			pstmt = con.prepareStatement(sql); // sql문 전송&맵핑 ==> "insert into product values(product_seq.nextval, ?,?,?,?)";
 			
 			pstmt.setString(1, vo.getName());
 			pstmt.setInt(2, vo.getPrice());
 			pstmt.setString(3, vo.getPictureurl());
 			pstmt.setString(4, vo.getDescription());
 			
-			pstmt.executeUpdate();
+			
+			pstmt.executeUpdate(); //sql문 실행
 			
 		}catch(Exception e) {
 			e.printStackTrace();

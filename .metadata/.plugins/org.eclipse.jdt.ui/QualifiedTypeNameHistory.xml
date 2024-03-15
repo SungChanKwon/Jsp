@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.apache.catalina.filters.ExpiresFilter.XPrintWriter"/>
     <fullyQualifiedTypeName name="com.saeyan.dto.MemberDAO"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="com.saeyan.dao.MemberDAO"/>
     <fullyQualifiedTypeName name="com.saeyan.dto.MemberVO"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
@@ -19,24 +18,27 @@
     <fullyQualifiedTypeName name="java.sql.Statement"/>
     <fullyQualifiedTypeName name="java.lang.module.ResolutionException"/>
     <fullyQualifiedTypeName name="org.apache.catalina.connector.Response"/>
+    <fullyQualifiedTypeName name="javax.swing.plaf.multi.MultiMenuItemUI"/>
+    <fullyQualifiedTypeName name="com.ezen.dto.MovieVO"/>
+    <fullyQualifiedTypeName name="com.ezen.dao.MovieDAO"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.saeyan.dto.ProductVO"/>
+    <fullyQualifiedTypeName name="com.saeyan.dao.ProductDAO"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.ToString"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
-    <fullyQualifiedTypeName name="javax.swing.plaf.multi.MultiMenuItemUI"/>
-    <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
-    <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
-    <fullyQualifiedTypeName name="com.ezen.dto.MovieVO"/>
-    <fullyQualifiedTypeName name="com.ezen.dao.MovieDAO"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="util.DBManager"/>
-    <fullyQualifiedTypeName name="com.saeyan.dao.ProductDAO"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="com.saeyan.dto.ProductVO"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="javax.servlet.ServletContext"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.MultipartRequest"/>
+    <fullyQualifiedTypeName name="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"/>
+    <fullyQualifiedTypeName name="com.ezen.dto.ProductVO"/>
+    <fullyQualifiedTypeName name="com.ezen.dao.ProductDAO"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
 </qualifiedTypeNameHistroy>

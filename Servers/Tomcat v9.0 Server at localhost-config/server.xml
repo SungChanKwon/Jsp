@@ -121,11 +121,8 @@
 					prefix="localhost_access_log" suffix=".txt" />
 
 
-
-
-				<Context docBase="web-study-10-practice"
-					path="/web-study-10-practice" reloadable="true"
-					source="org.eclipse.jst.jee.server:web-study-10-practice">
+				<Context docBase="web-study-11" path="/web-study-11"
+					reloadable="true" source="org.eclipse.jst.jee.server:web-study-11">
 					
 					<Resource name="jdbc/myoracle" auth="Container"
 		              type="javax.sql.DataSource" driverClassName="oracle.jdbc.OracleDriver"

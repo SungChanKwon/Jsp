@@ -68,14 +68,14 @@ public class ProductDAO {
 		
 		try {
 			con = DBManager.getConnection();
-			pstmt = con.prepareStatement(sql);
+			pstmt = con.prepareStatement(sql); //
 			
-			pstmt.setString(1, vo.getName());
+			pstmt.setString(1, vo.getName()); //sql에 값 대입하기 => 맵핑
 			pstmt.setInt(2, vo.getPrice());
 			pstmt.setString(3, vo.getPictureUrl());
 			pstmt.setString(4, vo.getDescription());
 			
-			pstmt.executeUpdate();
+			pstmt.executeUpdate(); //sql문 실행
 			
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -128,14 +128,14 @@ public class ProductDAO {
 	//수정
 	public void updateProduct(ProductVO vo) {
 		
-		String url = "update product set name=?, price=?, pictureurl=?, "
+		String sql = "update product set name=?, price=?, pictureurl=?, "
 				+ "description=? where code=? ";
 		Connection con = null;
 		PreparedStatement pstmt = null;
 		
 		try {
 			con = DBManager.getConnection();
-			pstmt = con.prepareStatement(url);
+			pstmt = con.prepareStatement(sql);
 			
 			pstmt.setString(1, vo.getName());
 			pstmt.setInt(2, vo.getPrice());
