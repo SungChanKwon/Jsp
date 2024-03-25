@@ -55,10 +55,10 @@ C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3894685765.ind
 \web-study-04-practice\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3629237033.index
 \web-study-04\src\main\java
-C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2889661914.index
-\web-study-10-practice\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2057774490.index
 \web-study-09-test\src\main\java
+C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2889661914.index
+\web-study-10-practice\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3029819031.index
 \web-study-09-test\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\966595526.index
@@ -77,6 +77,8 @@ C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\652996911.inde
 \web-study-10-practice2\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1710148052.index
 \web-study-01\src\main\java
+C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2957767849.index
+\JSP_OTT_PROJECT\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2436900184.index
 \web-study-04\src\main\java
 C:\JAVA\jsp\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\428456743.index
